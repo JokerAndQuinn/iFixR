@@ -4,9 +4,9 @@
 
 * [I. Introduction of Mimic](#user-content-i-introduction)
 * [II. Environment setup](#user-content-ii-environment)
-* [III. Run SimFix Step-by-Step](#user-content-iii-how-to-run)
+* [III. Run Step-by-Step](#user-content-iii-how-to-run)
 * [IV. Evaluation Result](#user-content-iv-evaluation-result)
-* [V. Generated Patches](#user-content-v-generated-pacthes)
+* [V. Generated Patches](#user-content-v-generated-patches)
 * [VI. Structure of the project](#user-content-vi-structure-of-the-project)
 
 ## I. Introduction
