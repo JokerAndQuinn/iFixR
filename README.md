@@ -172,5 +172,52 @@ MIMIC\(_{all}\) | 6/11 | 7/16 | 13/27
 MIMIC\(_{top5}\) | 3/7 | 5/6 | 8/13  
 
 
+Patches | Geniuness
+--------|---------
+[Lang_13](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_13/Patch_12.txt) | P
+L-58 |
+L-59 |
+M-34 |
+M-57 |
+M-75 |
+M-97 |
+L-45 |
+M-52 |
+M-5  |
+M-15 |
+M-65 |
+M-35 |
+M-58 |
+M-20 |
+M-64 | 
+M-2  |
+M-28 |
+L-57 |
+L-24 |
+L-43 |
+M-59 | 
+M-70 |
+L-7  |
+L-21 |
+<!-- M-95
+M-82
+L-6
+L-47
+L-10
+M-11
+L-63
+M-63
+M-104
+L-18
+L-44
+M-8
+M-32
+L-22
+L-26
+L-39
+M-42
+L-33
+M-96 -->
+
 
 <u>__ALL__ suggestions are welcomed.</u>
