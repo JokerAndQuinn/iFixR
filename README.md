@@ -174,50 +174,47 @@ MIMIC\(_{top5}\) | 3/7 | 5/6 | 8/13
 
 Patches | Geniuness
 --------|---------
-[Lang_13](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_13/Patch_12.txt) | P
-L-58 |
-L-59 |
-M-34 |
-M-57 |
-M-75 |
-M-97 |
-L-45 |
-M-52 |
-M-5  |
-M-15 |
-M-65 |
-M-35 |
-M-58 |
-M-20 |
-M-64 | 
-M-2  |
-M-28 |
-L-57 |
-L-24 |
-L-43 |
-M-59 | 
-M-70 |
-L-7  |
-L-21 |
-<!-- M-95
-M-82
-L-6
-L-47
-L-10
-M-11
-L-63
-M-63
-M-104
-L-18
-L-44
-M-8
-M-32
-L-22
-L-26
-L-39
-M-42
-L-33
-M-96 -->
-
-
-<u>__ALL__ suggestions are welcomed.</u>
+[Lang_13 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_13/Patch_.txt) |Plausible 
+[Lang_58 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_58/Patch_.txt) |Plausible 
+[Lang_59 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_59/Patch_.txt) |Correct 
+[Math_34 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_34/Patch_.txt) |Correct 
+[Math_57 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_57/Patch_.txt) |Correct 
+[Math_75 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_75/Patch_.txt) |Correct 
+[Math_97 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_97/Patch_.txt) |Plausible 
+[Lang_45 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_45/Patch_.txt) |Plausible 
+[Math_52 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_52/Patch_.txt) |Plausible 
+[Math_5  ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_5/Patch_.txt)  |Correct 
+[Math_15 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_15/Patch_.txt) |Correct 
+[Math_65 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_65/Patch_.txt) |Correct 
+[Math_35 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_35/Patch_.txt) |Correct 
+[Math_58 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_58/Patch_.txt) |Plausible 
+[Math_20 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_20/Patch_.txt) |Plausible 
+[Math_64 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_64/Patch_.txt) |Plausible 
+[Math_2  ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_2/Patch_.txt)  |Plausible 
+[Math_28 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_28/Patch_.txt) |Plausible 
+[Lang_57 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_57/Patch_.txt) |Correct 
+[Lang_24 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_24/Patch_.txt) |Correct 
+[Lang_43 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_43/Patch_.txt) |Plausible 
+[Math_59 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_59/Patch_.txt) |Correct 
+[Math_70 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_70/Patch_.txt) |Correct 
+[Lang_7  ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_7/Patch_.txt)  |Correct 
+[Lang_21 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_21/Patch_.txt) |Plausible 
+[Math_95 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_95/Patch_.txt) |Plausible 
+[Math_82 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_82/Patch_.txt) |Plausible 
+[Lang_6  ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_6/Patch_.txt)  |Correct 
+[Lang_47 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_47/Patch_.txt) |Correct 
+[Lang_10 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_10/Patch_.txt) |Correct 
+[Math_11 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_11/Patch_.txt) |Correct 
+[Lang_63 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_63/Patch_.txt) |Plausible 
+[Math_63 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_63/Patch_.txt) |Plausible 
+[Math_104](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_104/Patch_.txt)|Plausible 
+[Lang_18 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_18/Patch_.txt) |Plausible 
+[Lang_44 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_44/Patch_.txt) |Plausible 
+[Math_8  ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_8/Patch_.txt)  |Plausible 
+[Math_32 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_32/Patch_.txt) |Plausible 
+[Lang_22 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_22/Patch_.txt) |Correct 
+[Lang_26 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_26/Patch_.txt) |Correct 
+[Lang_39 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_39/Patch_.txt) |Correct 
+[Math_42 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_42/Patch_.txt) |Plausible 
+[Lang_33 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Lang_33/Patch_.txt) |Correct 
+[Math_96 ](https://github.com/fse19/mimic/blob/master/OUTPUT/MIMIC/FixedBugs/Math_96/Patch_.txt) |Plausible 
