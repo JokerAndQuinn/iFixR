@@ -6,7 +6,8 @@
 * [II. Environment setup](#user-content-ii-environment)
 * [III. Run SimFix Step-by-Step](#user-content-iii-how-to-run)
 * [IV. Evaluation Result](#user-content-iv-evaluation-result)
-* [V. Structure of the project](#user-content-v-structure-of-the-project)
+* [V. Generated Patches](#user-content-v-generated-pacthes)
+* [VI. Structure of the project](#user-content-vi-structure-of-the-project)
 
 ## I. Introduction
 
@@ -31,35 +32,31 @@
 
 ## II. Environment
 
-* OS: Linux (Tested on Ubuntu 16.04.2 LTS)
-* JDK: Oracle jdk1.7 (**important!**)
-* Download and configure Defects4J(**branch  [fee5ddf020](https://github.com/rjust/defects4j/tree/fee5ddf020d0ce9c793655b74f0ab068153c03ef)**) running environment.
-* Configure the following path.
-  * DEFECTS4J_HOME="home_of_defects4j"
+* OS: macOS Mojave (10.14.3)
+* JDK7: Oracle jdk1.7 (**important!**)
+* JDK8: Oracle jdk1.8 (**important!**)
+* Download and configure Anaconda
+* Create an python environment using the [environment file](environment.yml)
+  ```powershell
+  conda env create -f environment.yml
+  ```
+
 
 
 
 ## III. How to run
 
-*SimFix* was traditionally developed as an Eclipse Java project, you can simply import this project to your workspace and run it as a common Java program. The main class is **cofix.main.Main**, and for the running option please refer to the [Running Options](#user-content-step-2-running-options).
+* Active the conda environment from shell
+  ```powershell
+  source activate python36
+  ```
+
 
 #### Before running
 
-* `unzip` file `sbfl/data.zip` to `sbfl/data`  : used for fault localization
+* Update [config file](config.yml) with corresponding user paths.
 
-* using the command line provided by Defects4J to checkout a buggy version of benchmark for testing.
-
-   `Example: defects4j checkout -p Chart -v 1b -w ${buggy_program_path}/chart/chart_1_buggy`
-
-  **_NOTE_** : the path of the buggy version of benchmark have to be set as:
-
-  `…/projectName/projectName_id_buggy`  => `Example: /home/user/chart/chart_1_buggy`
-
-#### Step 1, Build The Project
-
-Originally, *SimFix* was developed as an [Eclipse](http://www.eclipse.org/mars/) Java Project, you can simply **import** the project into your workspace and the class `cofix.main.Main` is the entry of the whole program.
-
-#### Step 2, Running Options 
+#### Running Options 
 
 Our prototype of *SimFix* needs **three** input options for running.
 
@@ -145,8 +142,8 @@ LSRepair  | 8/14| 7/14 | 15/28
 SimFix  | 9/13| **14/26**| **23**/39  
 kPAR  | 1/8 | 7/18 | 8/26  
 AVATAR  | 5/11| 6/13 | 11/24  
+
 MIMIC_opt | **11/19** | 10/25 | 21/**44**
--------- | ---- | ---- | -----
 MIMIC_all | 6/11 | 7/16 | 13/27  
 MIMIC_top5 | 3/7 | 5/6 | 8/13  
 
