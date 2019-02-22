@@ -46,35 +46,56 @@
 
 ## III. How to run
 
-* Active the conda environment from shell
-  ```powershell
-  source activate python36
-  ```
-
-
 #### Before running
 
 * Update [config file](config.yml) with corresponding user paths.
 
+* Active the conda environment from shell
+  ```powershell
+  source activate python36
+  ```
+* Launch [startPy](startPy.sh) as follows:
+
+  ```powershell
+  bash startPy.sh [OPTIONS]
+  ```
+
 #### Running Options 
 
-Our prototype of *SimFix* needs **three** input options for running.
+*Mimic* needs **three** input options for running.
 
-* `--proj_home ` : the home of buggy program of benchmark. (`${buggy_program_path}` for the example)
+* `--root ` : The full path of directory where startPy.sh is localted
 
-* `--proj_name` : the project name of buggy program of benchmark. (`chart` for the example)
+* `--subject` : the project name of buggy program of benchmark. (`MATH,LANG,ALL` are expected values)
 
-* `--bug_id` : the identifier of the buggy program. (`1` for the example)
+* `--job` : the name of the job in the pipeline , supports multiple steps:
 
-  * the option of `--bugy_id` supports multiple formats:
+    `clone` : 
 
-    `single_id` : repair single bug, `e.g., 1`.
+    `collect` : repair a series of bugs with consecutive identifiers, `e.g., 1-3`.
 
-    `startId-endId` : repair a series of bugs with consecutive identifiers, `e.g., 1-3`.
+    `fix` : repair any bugs for the specific program, `e.g., 1,5,9`.
 
-    `single_id,single_id,single_id` : repair any bugs for the specific program, `e.g., 1,5,9`.
+    `bugPoints` : repair all buggy versions of a specific project, `i.e., all`.
 
-    `all` : repair all buggy versions of a specific project, `i.e., all`.
+    `brDownload` :
+
+    `brParser` :
+
+    `brFeatures` :
+
+    `verify` :
+
+    `simi` :  
+
+    `predict` :  
+
+    `eval` :  
+
+    `stmt` :  
+
+    `gv` :  
+
 
   ```powershell
   Usage: --proj_home=${proj_home} --proj_name=${proj_name} --bug_id=${bug_id}
@@ -82,44 +103,31 @@ Our prototype of *SimFix* needs **three** input options for running.
   Another: --proj_home=/home/user --proj_name=chart --bug_id=1,4,8
   ```
 
-**OPTION 1** : run within eclipse (please use the old version: tested on **[Mars](https://www.eclipse.org/mars/)**, which depends on Java7).
 
-* From the Main class:
 
-   `Run As`→`Run Configurations…` →`Arguments` : set the above arguments as *Program Arguments*.
 
-**OPTION 2** : run using command line.
+#### Data Viewer
 
-* We also provide runnable jar file of *SimFix* in the home folder of the project `i.e., simfix.jar`.
+The data provided with replication package is listed in directory [data](data)
 
-  set the home directory of the *SimFix* project as your correct path and then run as:
-
-  `java -jar simfix.jar --proj_home=/home/user --proj_name=chart --bug_id=1`
-
-#### Step 3, Result Analysis
-
-After finishing the repair, there will be two additional folders: `log` and `patch`.
-
-* `log` : debug output, including buggy statements already tried, patches and reference code snippet for correct patch generation.
-
-* `patch` : a single source file repaired by *SimFix* that can pass the test suite. In the source file, you can find the patch, which is formatted as (example of Chart_1):
-
-  ```java
-  // start of generated patch
-  int index=this.plot.getIndexOf(this);
-  CategoryDataset dataset=this.plot.getDataset(index);
-  if(dataset==null){
-  return result;
-  }
-  // end of generated patch
-  /* start of original code
-          int index = this.plot.getIndexOf(this);
-          CategoryDataset dataset = this.plot.getDataset(index);
-          if (dataset != null) {
-              return result;
-          }
-   end of original code*/
+  ```python
+   import pickle as p
+   import gzip
+   def load_zipped_pickle(filename):
+      with gzip.open(filename, 'rb') as f:
+          loaded_object = p.load(f)
+          return loaded_object
   ```
+Usage
+
+  ```python
+  result = load_zipped_pickle('code/LANGbugReportsComplete.pickle')
+  # Result is pandas object which can be exported to several formats
+  # Details on how to export is listed in offical library documentation
+  # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html
+
+  ```
+
 
 ## IV. Evaluation Result
 
@@ -202,15 +210,12 @@ Patches | Genuineness
 
 ## VI. Structure of the project
 ```powershell
-  |--- README.md   :  user guidance
-  |--- bin         :  binary code
-  |--- d4j-info    :  defects4j information
-  |--- doc         :  document
-  |--- final       :  evaluation result
-  |--- lib         :  dependent libraries
-  |--- sbfl        :  fault localization tool
-  |--- src         :  source code
-  |--- test        :  test suite
+  |--- README.md                    :  user guidance
+  |--- code                         :  code
+  |--- data                         :  replication data
+  |--- doc                          :  document
+  |--- OUTPUT/MIMIC/FixedBugs       :  generated patches
+
 ```
 
 ----
