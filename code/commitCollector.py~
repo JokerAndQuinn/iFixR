@@ -1,0 +1,27 @@
+from os import listdir
+import os
+from subprocess import Popen, PIPE
+
+def collectCommitsFromRepos():
+	l = [f for f in listdir(".") if os.path.isdir(f)]
+	return l
+
+
+def getCommitFromRepo(f):
+
+    try:
+        cmd = 'git -C ' + f + ' log --no-merges --pretty=format:'{"commit":"%H","commitDate":"%ci","title":"%f","committer":"%ce"}'' > ' + f + '.commits'
+        #cmd = 'git -C ' + f + ' log --no-merges --oneline > ' + f + '.commits' 
+        # lines = subprocess.check_output(cmd, shell=True)
+        with Popen(cmd, stdout=PIPE, stderr=PIPE, shell=True) as p:
+            output, errors = p.communicate()
+            print(output)
+    except Exception as e:
+        print(e)
+        print(errors)
+        return ''
+
+if __name__ == '__main__':
+    gitrepos = collectCommitsFromRepos()
+    for gitrepo in gitrepos:
+    	getCommitFromRepo(gitrepo)
