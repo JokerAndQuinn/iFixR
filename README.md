@@ -13,9 +13,8 @@
 
 *Mimic* a patch generation system for user-reported bugs
 
-#is an automatic program repair technique, which leverages exisiting patches from other projects and similar code snippets in #the same project to generate patches. The following figure is the workflow of our approach.
-
 ![The workflow of this technique.\label{workflow}](docs/figures.png)
+
 
 
 
