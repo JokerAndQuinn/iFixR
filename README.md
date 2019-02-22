@@ -147,7 +147,30 @@ Totally, *SimFix* successfully repair 34 bugs among 357 bugs in Defects4j v1.0 b
 
 ----
 
-![Result Comparison.\label{workflow}](docs/test)
+<!-- ![Result Comparison.\label{workflow}](docs/test) -->
+APR tool | Lang | Math | Total
+-------- | ---- | ---- | -----
+jGenProg  | 0/0 | 5/18 | 5/18  
+jKali  | 0/0 | 1/14 | 1/14  
+jMutRepair  | 0/1 | 2/11 | 2/12  
+HDRepair  | 2/6 | 4/7 | 6/13  
+Nopol  | 3/7 | 1/21 | 4/28  
+ACS  | 3/4 | 12/16| 15/20  
+ELIXIR  | 8/12| 12/19| 20/31  
+JAID  | 1/8 | 1/8 | 2/16  
+ssFix  | 5/12| 10/26| 15/38  
+CapGen  | 5/5 | 12/16| 17/21  
+SketchFix  | 3/4 | 7/8 | 10/12  
+FixMiner  | 2/3 | 12/14| 14/17  
+LSRepair  | 8/14| 7/14 | 15/28  
+SimFix  | 9/13| <span>**14/26**</span>| <span>**23**</span>/39  
+kPAR  | 1/8 | 7/18 | 8/26  
+AVATAR  | 5/11| 6/13 | 11/24  
+MIMIC\(_{opt}\) | <span>**11/19**</span> | 10/25 |
+
+MIMIC\(_{all}\) | 6/11 | 7/16 | 13/27  
+MIMIC\(_{top5}\) | 3/7 | 5/6 | 8/13  
+
 
 
 <u>__ALL__ suggestions are welcomed.</u>
