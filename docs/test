@@ -1,0 +1,31 @@
+<span>L<span>20mm</span>|C<span>16mm</span>C<span>16mm</span>C<span>16mm</span></span>
+APR tool & <span>**Lang\(^\ast\)**</span> &
+<span>**Math\(^\ast\)**</span> & <span>**Total\(^\ast\)**</span>  
+jGenProg  & 0/0 & 5/18 & 5/18  
+jKali  & 0/0 & 1/14 & 1/14  
+jMutRepair  & 0/1 & 2/11 & 2/12  
+HDRepair  & 2/6 & 4/7 & 6/13  
+Nopol  & 3/7 & 1/21 & 4/28  
+ACS  & 3/4 & 12/16& 15/20  
+ELIXIR  & 8/12& 12/19& 20/31  
+JAID  & 1/8 & 1/8 & 2/16  
+ssFix  & 5/12& 10/26& 15/38  
+CapGen  & 5/5 & 12/16& 17/21  
+SketchFix  & 3/4 & 7/8 & 10/12  
+FixMiner  & 2/3 & 12/14& 14/17  
+LSRepair  & 8/14& 7/14 & 15/28  
+SimFix  & 9/13& <span>**14/26**</span>& <span>**23**</span>/39  
+kPAR  & 1/8 & 7/18 & 8/26  
+AVATAR  & 5/11& 6/13 & 11/24  
+MIMIC\(_{opt}\) & <span>**11/19**</span> & 10/25 &
+21/<span>**44**</span>  
+MIMIC\(_{all}\) & 6/11 & 7/16 & 13/27  
+MIMIC\(_{top5}\) & 3/7 & 5/6 & 8/13  
+
+<span>\(^\ast\) \(x/y\): x is the number of bugs for which a
+<span>*genuine*</span> patch is generated; y is the number of bugs for
+which a <span>*plausible*</span> patch is generated.  
+MIMIC\(_{opt}\): the version of where available test cases are relevant
+to the bugs.  
+MIMIC\(_{all}\): all recommended patches are considered.  
+MIMIC\(_{top5}\): only top 5 recommended patches are considered.</span>

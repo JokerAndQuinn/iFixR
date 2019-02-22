@@ -14,7 +14,7 @@
 
 #is an automatic program repair technique, which leverages exisiting patches from other projects and similar code snippets in #the same project to generate patches. The following figure is the workflow of our approach.
 
-![The workflow of this technique.\label{workflow}](figures.png)
+![The workflow of this technique.\label{workflow}](docs/figures.png)
 
 #### Mining Stage
 
@@ -146,6 +146,8 @@ Totally, *SimFix* successfully repair 34 bugs among 357 bugs in Defects4j v1.0 b
 ```
 
 ----
+
+![Result Comparison.\label{workflow}](docs/test)
 
 
 <u>__ALL__ suggestions are welcomed.</u>
