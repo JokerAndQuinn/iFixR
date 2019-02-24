@@ -56,39 +56,42 @@
 
 * `--subject` : the project name of buggy program of benchmark. (`MATH,LANG,ALL` are expected values)
 
-* `--job` : the name of the job in the pipeline , supports multiple steps:
+* `--job` : the name of the job in the pipeline , supports multiple steps which needs to executed in order:
 
-    `clone` : 
+    `clone` : Clone target project repository.
 
-    `collect` : repair a series of bugs with consecutive identifiers, `e.g., 1-3`.
+    `collect` : Collect all commit from repository.
 
-    `fix` : repair any bugs for the specific program, `e.g., 1,5,9`.
+    `fix` : Collect commits linked to a bug report.
 
-    `bugPoints` : repair all buggy versions of a specific project, `i.e., all`.
+    `bugPoints` : Identify the snapshot of the repository before the bug fixing commit introducted.
 
-    `brDownload` :
+    `brDownload` : Download bug reports recovered from commit log
 
-    `brParser` :
+    `brParser` : Parse bug reports to select the bug report where type labelled as BUG and status as RESOLVED or CLOSED
 
-    `brFeatures` :
+    `brFeatures` : Extract bug report features
 
-    `verify` :
+    `verify` : Extract source code features
 
-    `simi` :  
+    `simi` :  Compute the similarity between bug reports and source code features
 
-    `predict` :  
+    `predict` :  Predict file level bug localization
 
-    `eval` :  
+    `eval` :  Retrieve predictions for all bug reports and suspiciousness scores of files.
 
-    `stmt` :  
+    `stmt` :  Compute statement level bug localization
 
-    `gv` :  
+    `gv` :  Execute generate-validation step to produce patch candidates.
 
 
   ```powershell
-  Usage: --proj_home=${proj_home} --proj_name=${proj_name} --bug_id=${bug_id}
-  Example: --proj_home=/home/user --proj_name=chart --bug_id=1
-  Another: --proj_home=/home/user --proj_name=chart --bug_id=1,4,8
+  Usage: bash startPy.sh $1 $2 $3
+  where $1 is root
+        $2 is job
+        $3 is subject
+  Example: bash startPy.sh /home/user/mimic clone MATH
+  Another: bash startPy.sh /home/user/mimic gv MATH
   ```
 
 
@@ -97,6 +100,9 @@
 #### Data Viewer
 
 The data provided with replication package is listed in directory [data](data)
+The data is stored in different formats. (e.g. pickle, db, csv, etc..)
+
+The see content of the .pickle file the following script could be used.
 
   ```python
    import pickle as p
