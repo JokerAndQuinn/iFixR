@@ -28,6 +28,8 @@
   ```powershell
   conda env create -f environment.yml
   ```
+  
+* Download and Install [Defects4J](https://github.com/rjust/defects4j)
 
 
 
