@@ -18,7 +18,7 @@
 
 
 
-## II. Environment
+## II. Environment Installation
 
 * OS: macOS Mojave (10.14.3)
 * JDK7: Oracle jdk1.7 (**important!**)
