@@ -1,8 +1,8 @@
 
 
-# Mimic
+# IFixR
 
-* [I. Introduction of Mimic](#user-content-i-introduction)
+* [I. Introduction of IFixR](#user-content-i-introduction)
 * [II. Environment setup](#user-content-ii-environment)
 * [III. Run Step-by-Step](#user-content-iii-how-to-run)
 * [IV. Evaluation Result](#user-content-iv-evaluation-result)
@@ -11,7 +11,7 @@
 
 ## I. Introduction
 
-*Mimic* a patch generation system for user-reported bugs
+*IFixR* a patch generation system for user-reported bugs
 
 ![The workflow of this technique.\label{workflow}](docs/figures.png)
 
@@ -50,7 +50,7 @@
 
 #### Running Options 
 
-*Mimic* needs **three** input options for running.
+*IFixR* needs **three** input options for running.
 
 * `--root ` : The full path of directory where startPy.sh is localted
 
