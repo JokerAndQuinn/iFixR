@@ -177,12 +177,14 @@
     ```
 
 
-    `14.gv` :  Execute generate-validation step to produce patch candidates.  eg Lang_15 partial, Math_34 
+    `14.gv` :  Execute generate-validation step to produce patch candidates.   
     
         
-    ```powershell   
-      Example: bash startPy.sh /home/user/mimic brFeatures MATH
-      Example: bash startPy.sh /home/user/mimic brFeatures LANG
+    ```powershell  
+      Execute generate-validation step on a single defects4j bug (eg Lang_15 partial, Math_34 case sensitive)
+      Example: bash startPy.sh /home/user/mimic brFeatures Math_34
+      Execute generate-validation step on all dataset. (!!! Takes to much time !!!)
+      Example: bash startPy.sh /home/user/mimic brFeatures ALL
     ```
 
 
