@@ -18,18 +18,17 @@
 
 
 
-## II. Environment Installation
+## II. Environment
 
 * OS: macOS Mojave (10.14.3)
 * JDK7: Oracle jdk1.7 (**important!**)
 * JDK8: Oracle jdk1.8 (**important!**)
+* Defects4J: Clone and configure [defects4j](https://github.com/rjust/defects4j) from its original repository
 * Download and configure Anaconda
 * Create an python environment using the [environment file](environment.yml)
   ```powershell
   conda env create -f environment.yml
   ```
-  
-* Download and Install [Defects4J](https://github.com/rjust/defects4j)
 
 
 
@@ -54,37 +53,39 @@
 
 *IFixR* needs **three** input options for running.
 
-* `--root ` : The full path of directory where startPy.sh is localted
+* `--root ` : The full path of directory where startPy.sh is located
 
-* `--subject` : the project name of buggy program of benchmark. (`MATH,LANG,ALL` are expected values)
+* `--subject` : the project name of buggy program of benchmark. (`MATH,LANG` are expected values)
 
 * `--job` : the name of the job in the pipeline , supports multiple steps which needs to executed in order:
 
-    `clone` : Clone target project repository.
+    `1.clone` : Clone target project repository.
 
-    `collect` : Collect all commit from repository.
+    `2.collect` : Collect all commit from repository.
 
-    `fix` : Collect commits linked to a bug report.
+    `3.fix` : Collect commits linked to a bug report.
 
-    `bugPoints` : Identify the snapshot of the repository before the bug fixing commit introducted.
+    `4.bugPoints` : Identify the snapshot of the repository before the bug fixing commit introduced.
 
-    `brDownload` : Download bug reports recovered from commit log
+    `5.brDownload` : Download bug reports recovered from commit log
 
-    `brParser` : Parse bug reports to select the bug report where type labelled as BUG and status as RESOLVED or CLOSED
+    `6.brParser` : Parse bug reports to select the bug report where type labeled as BUG and status as RESOLVED or CLOSED
 
-    `brFeatures` : Extract bug report features
+    `7.brFeatures` : Extract bug report features
 
-    `verify` : Extract source code features
+    `8.verify` : Extract source code features
 
-    `simi` :  Compute the similarity between bug reports and source code features
+    `9.simi` :  Compute the similarity between bug reports and source code features
 
-    `predict` :  Predict file level bug localization
+    `10.features` :  Compute the features from similarity scores
 
-    `eval` :  Retrieve predictions for all bug reports and suspiciousness scores of files.
+    `11.predict` :  Predict file level bug localization
 
-    `stmt` :  Compute statement level bug localization
+    `12.eval` :  Retrieve predictions for all bug reports and suspiciousness scores of files.
 
-    `gv` :  Execute generate-validation step to produce patch candidates.
+    `13.stmt` :  Compute statement level bug localization
+
+    `14.gv` :  Execute generate-validation step to produce patch candidates.  eg Lang_15 partial, Math_34 
 
 
   ```powershell
