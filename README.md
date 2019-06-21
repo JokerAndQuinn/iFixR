@@ -185,11 +185,11 @@
     
         
     ```powershell  
-      Execute generate-validation step on a single defects4j bug (eg Lang_15 partial, Math_34 case sensitive)
+      Execute generate-validation step on a single defects4j bug (eg Lang_15, Math_34 case sensitive)
       
         Example: bash startPy.sh /home/user/mimic gv Math_34
       
-      Execute generate-validation step on all dataset. (!!! Takes to much time !!!)
+      Execute generate-validation step on all dataset. (!!! Takes significant amount of time !!!)
       
         Example: bash startPy.sh /home/user/mimic gv ALL
     ```
