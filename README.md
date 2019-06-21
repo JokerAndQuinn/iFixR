@@ -58,13 +58,11 @@
   where $1 is root
         $2 is job
         $3 is subject
-  Example: bash startPy.sh /home/user/mimic clone MATH
-  Another: bash startPy.sh /home/user/mimic gv MATH
   ```
 
 * `root ` : The full path of directory where startPy.sh is located
 
-* `subject` : the project name of buggy program of benchmark. (`MATH,LANG` are expected values but can be specific for jbo)
+* `subject` : the project name of buggy program of benchmark. (`MATH,LANG` are expected values but can be specific for job)
 
 * `job` : the name of the job in the pipeline , supports multiple steps which needs to executed in order:
 
@@ -145,8 +143,8 @@
     
         
     ```powershell   
-      Example: bash startPy.sh /home/user/mimic simi MATH
-      Example: bash startPy.sh /home/user/mimic simi LANG
+      Example: bash startPy.sh /home/user/mimic features MATH
+      Example: bash startPy.sh /home/user/mimic features LANG
     ```
 
 
@@ -154,8 +152,8 @@
     
         
     ```powershell   
-      Example: bash startPy.sh /home/user/mimic brFeatures MATH
-      Example: bash startPy.sh /home/user/mimic brFeatures LANG
+      Example: bash startPy.sh /home/user/mimic predict MATH
+      Example: bash startPy.sh /home/user/mimic predict LANG
     ```
 
 
@@ -163,8 +161,8 @@
     
         
     ```powershell   
-      Example: bash startPy.sh /home/user/mimic brFeatures MATH
-      Example: bash startPy.sh /home/user/mimic brFeatures LANG
+      Example: bash startPy.sh /home/user/mimic eval MATH
+      Example: bash startPy.sh /home/user/mimic eval LANG
     ```
 
 
@@ -172,8 +170,8 @@
     
         
     ```powershell   
-      Example: bash startPy.sh /home/user/mimic brFeatures MATH
-      Example: bash startPy.sh /home/user/mimic brFeatures LANG
+      Example: bash startPy.sh /home/user/mimic stmt MATH
+      Example: bash startPy.sh /home/user/mimic stmt LANG
     ```
 
 
@@ -183,11 +181,11 @@
     ```powershell  
       Execute generate-validation step on a single defects4j bug (eg Lang_15 partial, Math_34 case sensitive)
       
-        Example: bash startPy.sh /home/user/mimic brFeatures Math_34
+        Example: bash startPy.sh /home/user/mimic gv Math_34
       
       Execute generate-validation step on all dataset. (!!! Takes to much time !!!)
       
-        Example: bash startPy.sh /home/user/mimic brFeatures ALL
+        Example: bash startPy.sh /home/user/mimic gv ALL
     ```
 
 
