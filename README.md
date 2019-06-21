@@ -53,41 +53,6 @@
 
 *IFixR* needs **three** input options for running.
 
-* `--root ` : The full path of directory where startPy.sh is located
-
-* `--subject` : the project name of buggy program of benchmark. (`MATH,LANG` are expected values)
-
-* `--job` : the name of the job in the pipeline , supports multiple steps which needs to executed in order:
-
-    `1.clone` : Clone target project repository.
-
-    `2.collect` : Collect all commit from repository.
-
-    `3.fix` : Collect commits linked to a bug report.
-
-    `4.bugPoints` : Identify the snapshot of the repository before the bug fixing commit introduced.
-
-    `5.brDownload` : Download bug reports recovered from commit log
-
-    `6.brParser` : Parse bug reports to select the bug report where type labeled as BUG and status as RESOLVED or CLOSED
-
-    `7.brFeatures` : Extract bug report features
-
-    `8.verify` : Extract source code features
-
-    `9.simi` :  Compute the similarity between bug reports and source code features
-
-    `10.features` :  Compute the features from similarity scores
-
-    `11.predict` :  Predict file level bug localization
-
-    `12.eval` :  Retrieve predictions for all bug reports and suspiciousness scores of files.
-
-    `13.stmt` :  Compute statement level bug localization
-
-    `14.gv` :  Execute generate-validation step to produce patch candidates.  eg Lang_15 partial, Math_34 
-
-
   ```powershell
   Usage: bash startPy.sh $1 $2 $3
   where $1 is root
@@ -96,6 +61,133 @@
   Example: bash startPy.sh /home/user/mimic clone MATH
   Another: bash startPy.sh /home/user/mimic gv MATH
   ```
+
+* `root ` : The full path of directory where startPy.sh is located
+
+* `subject` : the project name of buggy program of benchmark. (`MATH,LANG` are expected values but can be specific for jbo)
+
+* `job` : the name of the job in the pipeline , supports multiple steps which needs to executed in order:
+
+    `1.clone` : Clone target project repository.
+    
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic clone MATH
+      Example: bash startPy.sh /home/user/mimic clone LANG
+    ```
+
+    `2.collect` : Collect all commit from repository.
+    
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic collect MATH
+      Example: bash startPy.sh /home/user/mimic collect LANG
+    ```
+
+    `3.fix` : Collect commits linked to a bug report.
+        
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic fix MATH
+      Example: bash startPy.sh /home/user/mimic fix LANG
+    ```
+
+
+    `4.bugPoints` : Identify the snapshot of the repository before the bug fixing commit introduced.
+    
+        
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic bugPoints MATH
+      Example: bash startPy.sh /home/user/mimic bugPoints LANG
+    ```
+
+
+    `5.brDownload` : Download bug reports recovered from commit log
+    
+        
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic brDownload MATH
+      Example: bash startPy.sh /home/user/mimic brDownload LANG
+    ```
+
+
+    `6.brParser` : Parse bug reports to select the bug report where type labeled as BUG and status as RESOLVED or CLOSED
+    
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic brParser MATH
+      Example: bash startPy.sh /home/user/mimic brParser LANG
+    ```
+
+    `7.brFeatures` : Extract bug report features
+    
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic brFeatures MATH
+      Example: bash startPy.sh /home/user/mimic brFeatures LANG
+    ```
+
+
+    `8.verify` : Extract source code features
+    
+        
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic verify MATH
+      Example: bash startPy.sh /home/user/mimic verify LANG
+    ```
+
+
+    `9.simi` :  Compute the similarity between bug reports and source code features
+    
+        
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic simi MATH
+      Example: bash startPy.sh /home/user/mimic simi LANG
+    ```
+
+
+    `10.features` :  Compute the features from similarity scores
+    
+        
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic simi MATH
+      Example: bash startPy.sh /home/user/mimic simi LANG
+    ```
+
+
+    `11.predict` :  Predict file level bug localization
+    
+        
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic brFeatures MATH
+      Example: bash startPy.sh /home/user/mimic brFeatures LANG
+    ```
+
+
+    `12.eval` :  Retrieve predictions for all bug reports and suspiciousness scores of files.
+    
+        
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic brFeatures MATH
+      Example: bash startPy.sh /home/user/mimic brFeatures LANG
+    ```
+
+
+    `13.stmt` :  Compute statement level bug localization
+    
+        
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic brFeatures MATH
+      Example: bash startPy.sh /home/user/mimic brFeatures LANG
+    ```
+
+
+    `14.gv` :  Execute generate-validation step to produce patch candidates.  eg Lang_15 partial, Math_34 
+    
+        
+    ```powershell   
+      Example: bash startPy.sh /home/user/mimic brFeatures MATH
+      Example: bash startPy.sh /home/user/mimic brFeatures LANG
+    ```
+
+
+
+
 
 
 
