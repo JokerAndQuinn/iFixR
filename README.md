@@ -24,6 +24,11 @@
 * JDK7: Oracle jdk1.7 (**important!**)
 * JDK8: Oracle jdk1.8 (**important!**)
 * Defects4J: Clone and configure [defects4j](https://github.com/rjust/defects4j) from its original repository
+  ```powershell
+  git clone https://github.com/rjust/defects4j
+  cd defects4j
+  ./init.sh
+  ```
 * Download and configure Anaconda
 * Create an python environment using the [environment file](environment.yml)
   ```powershell
@@ -38,6 +43,10 @@
 #### Before running
 
 * Update [config file](config.yml) with corresponding user paths.
+  ```powershell
+  Defects4J home path requires '/' at the end
+  Example: /Users/projects/defects4j/
+  ```
 
 * Active the conda environment from shell
   ```powershell
@@ -152,8 +161,7 @@
     
         
     ```powershell   
-      Example: bash startPy.sh /home/user/mimic predict MATH
-      Example: bash startPy.sh /home/user/mimic predict LANG
+      Example: bash startPy.sh /home/user/mimic predict ALL
     ```
 
 
@@ -161,8 +169,7 @@
     
         
     ```powershell   
-      Example: bash startPy.sh /home/user/mimic eval MATH
-      Example: bash startPy.sh /home/user/mimic eval LANG
+      Example: bash startPy.sh /home/user/mimic eval ALL
     ```
 
 
@@ -170,8 +177,7 @@
     
         
     ```powershell   
-      Example: bash startPy.sh /home/user/mimic stmt MATH
-      Example: bash startPy.sh /home/user/mimic stmt LANG
+      Example: bash startPy.sh /home/user/mimic stmt ALL (!!! Clones all defects4j bugs and compile, may take significant amount of time)
     ```
 
 
